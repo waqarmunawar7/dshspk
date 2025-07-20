@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design your dream home with our AI-powered home design platform. Generate floor plans, get accurate cost estimates, and explore stunning 3D layouts instantly.">
+  <meta name="keywords" content="home design, 3D house layout, floor plan generator, cost estimation, AI architecture">
+  <meta name="author" content="YourBrand">
+  <title>AI Home Design | Generate Floor Plans & 3D Layouts Instantly</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@headlessui/react@1.4.2/dist/headlessui.umd.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="shadow-md sticky top-0 z-50 bg-white transition-all duration-300 ease-in-out">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center fade-in">
+      <h1 class="text-2xl font-bold text-blue-600 hover:scale-105 transform transition duration-300">AIHomeDesign</h1>
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#features" class="text-gray-700 hover:text-blue-600 transition duration-300">Features</a>
+        <a href="#plans" class="text-gray-700 hover:text-blue-600 transition duration-300">Plans</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-xl font-medium hover:bg-blue-700 transition-transform transform hover:scale-105">Start Designing</button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-blue-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 fade-in">
+      <a href="#features" class="block text-gray-700 py-2 hover:text-blue-600">Features</a>
+      <a href="#plans" class="block text-gray-700 py-2 hover:text-blue-600">Plans</a>
+      <a href="#contact" class="block text-gray-700 py-2 hover:text-blue-600">Contact</a>
+      <button class="w-full bg-blue-600 text-white py-2 mt-2 rounded-xl hover:bg-blue-700">Start Designing</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center fade-in">
+  <div>
+    <h2 class="text-4xl font-bold mb-4">Design Your Dream Home with AI</h2>
+    <p class="mb-6 text-lg text-gray-600">Generate floor plans, estimate costs, and view stunning 3D layouts in just a few clicks. Whether you're building or renovating, get your project started today.</p>
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition">Start Designing</button>
+  </div>
+  <div>
+    <img src="assets/images/img.png" alt="3D House Design Preview" class="rounded-xl w-full hidden md:block">
+  </div>
+</section>
+
+
+  <!-- Features Section -->
+  <section id="features" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-semibold mb-12 fade-in">Why Choose AIHomeDesign?</h3>
+      <div class="grid md:grid-cols-3 gap-8 fade-in">
+        <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+          <h4 class="text-xl font-bold mb-2">Smart Layout Generator</h4>
+          <p class="text-gray-600">Input your requirements and get optimized floor plans instantly with AI assistance.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+          <h4 class="text-xl font-bold mb-2">Accurate Cost Estimator</h4>
+          <p class="text-gray-600">Receive real-time construction cost breakdowns based on location and materials.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+          <h4 class="text-xl font-bold mb-2">Stunning 3D Views</h4>
+          <p class="text-gray-600">Explore interactive 3D walkthroughs of your designed space in various styles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <div>
+        <h5 class="text-lg font-semibold mb-4">AIHomeDesign</h5>
+        <p class="text-gray-400">Your smart partner in designing, estimating, and visualizing beautiful homes.</p>
+      </div>
+      <div>
+        <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#features" class="hover:text-white">Features</a></li>
+          <li><a href="#plans" class="hover:text-white">Pricing Plans</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-lg font-semibold mb-4">Contact Us</h5>
+        <p class="text-gray-400">Email: support@aihomedesign.com</p>
+        <p class="text-gray-400">Lahore, Pakistan</p>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 mt-8 text-sm">
+      &copy; 2025 AIHomeDesign. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('block');
+    });
+  </script>
+</body>
+</html>
